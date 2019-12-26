@@ -131,5 +131,8 @@ class LinkedList:
 if __name__ == "__main__":
     l = LinkedList()
     l.push(1)
-    
+    l.append(2)
+    l.append(4)
+    l.append(5)
+    l.insertAfter(l.head.next, 3)
     l.printReverse()
