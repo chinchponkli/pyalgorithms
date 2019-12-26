@@ -25,5 +25,5 @@ a.printList()
 for i in range(a.size() + 1):
     nthNode = getNthNode(a.head, i)
     print(nthNode.data if nthNode is not None else None)
-nthNode = getNthNode(a.head, -1)
-print(nthNode.data if nthNode is not None else None)
+#nthNode = getNthNode(a.head, -1)
+#print(nthNode.data if nthNode is not None else None) - will raise exceptions
