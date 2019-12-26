@@ -105,8 +105,6 @@ class LinkedList:
             else:
                 self.head = node.next
 
-
-
 if __name__ == "__main__":
     l = LinkedList()
     l.push(1)
