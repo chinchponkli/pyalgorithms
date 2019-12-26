@@ -7,7 +7,7 @@ Basic data structures and algorithms in python.
 ## Singly Linked Lists
 
 1. [LinkedList - Introduction and Node Structure]
-2. [LinkedList - Introduction and Node Structure]
+2. [LinkedList - Insertion and Traversal]
 
 # Trees
 
