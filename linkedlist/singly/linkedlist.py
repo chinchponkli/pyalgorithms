@@ -72,7 +72,21 @@ class LinkedList:
             current = current.next
             print("->", end = " ")
         print("null")
-        print()
+        print
+
+    # deletes first node where data == key
+    def deleteKey(self, key):
+        node, prevNode = self.head, None
+        while node and node.data != key:
+            prevNode = node
+            node = node.next
+        # if node is none means there is no matching node
+        if node:
+            # if prevNode is None means node is head
+            if prevNode:
+                prevNode.next = node.next
+            else:
+                self.head = node.next
 
 if __name__ == "__main__":
     l = LinkedList()
@@ -81,4 +95,5 @@ if __name__ == "__main__":
     l.append(4)
     l.append(5)
     l.insertAfter(l.head.next, 3)
+    l.deleteKey(0)
     l.printFormatted()
