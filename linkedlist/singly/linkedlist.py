@@ -88,6 +88,25 @@ class LinkedList:
             else:
                 self.head = node.next
 
+    # deletes node at index. index is zero based
+    def deleteAt(self, index):
+        if index < 0:
+            raise Exception("index cannot be less than zero")
+        node, prevNode = self.head, None
+        while node and index != 0:
+            prevNode = node
+            node = node.next
+            index -= 1
+        # if node is none means index is out of bounds
+        if node:
+            # if prevNode is None means node is head
+            if prevNode:
+                prevNode.next = node.next
+            else:
+                self.head = node.next
+
+
+
 if __name__ == "__main__":
     l = LinkedList()
     l.push(1)
@@ -95,5 +114,5 @@ if __name__ == "__main__":
     l.append(4)
     l.append(5)
     l.insertAfter(l.head.next, 3)
-    l.deleteKey(0)
+    l.deleteAt(3)
     l.printFormatted()
