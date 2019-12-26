@@ -64,16 +64,21 @@ class LinkedList:
             current = current.next
         print()
 
+    def printFormatted(self):
+        print("head ->", end = " ")
+        current = self.head
+        while current:
+            print(current.data, end = " ")
+            current = current.next
+            print("->", end = " ")
+        print("null")
+        print()
+
 if __name__ == "__main__":
     l = LinkedList()
-    l.printList()
     l.push(1)
-    l.printList()
     l.append(2)
-    l.printList()
     l.append(4)
-    l.printList()
     l.append(5)
-    l.printList()
     l.insertAfter(l.head.next, 3)
-    l.printList()
+    l.printFormatted()
