@@ -109,6 +109,14 @@ class LinkedList:
         while self.head:
             self.deleteAt(0)
 
+    def size(self):
+        current = self.head
+        size = 0
+        while current:
+            size += 1
+            current = current.next
+        return size
+
 if __name__ == "__main__":
     l = LinkedList()
     l.push(1)
@@ -116,5 +124,5 @@ if __name__ == "__main__":
     l.append(4)
     l.append(5)
     l.insertAfter(l.head.next, 3)
-    l.deleteAll()
     l.printFormatted()
+    print(l.size())
