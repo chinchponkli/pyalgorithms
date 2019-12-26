@@ -105,6 +105,10 @@ class LinkedList:
             else:
                 self.head = node.next
 
+    def deleteAll(self):
+        while self.head:
+            self.deleteAt(0)
+
 if __name__ == "__main__":
     l = LinkedList()
     l.push(1)
@@ -112,5 +116,5 @@ if __name__ == "__main__":
     l.append(4)
     l.append(5)
     l.insertAfter(l.head.next, 3)
-    l.deleteAt(3)
+    l.deleteAll()
     l.printFormatted()
