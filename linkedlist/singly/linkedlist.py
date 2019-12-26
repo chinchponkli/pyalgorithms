@@ -117,12 +117,19 @@ class LinkedList:
             current = current.next
         return size
 
+    def printReverse(self):
+        print("null <-", end = " ")
+        self.printReverseUtil(self.head)
+        print("head")
+
+    def printReverseUtil(self, node):
+        if node:
+            self.printReverseUtil(node.next)
+            print(node.data, end = " ")
+            print("<-", end = " ")
+
 if __name__ == "__main__":
     l = LinkedList()
     l.push(1)
-    l.append(2)
-    l.append(4)
-    l.append(5)
-    l.insertAfter(l.head.next, 3)
-    l.printFormatted()
-    print(l.size())
+    
+    l.printReverse()
