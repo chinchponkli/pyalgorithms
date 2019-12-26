@@ -31,3 +31,49 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.head = None
+
+    # Insert new node at head
+    def push(self, data):
+        newNode = Node(data)
+        newNode.next = self.head
+        self.head = newNode
+
+    # Append a new node at end of list
+    def append(self, data):
+        newNode = Node(data)
+        if self.head is None:
+            # if list is empty make new node as head
+            self.head = newNode
+        else:
+            # if list is not empty find last node and do lastNode.next = newNode
+            lastNode = self.head
+            while lastNode.next:
+                lastNode = lastNode.next
+            lastNode.next = newNode
+
+    def insertAfter(self, prevNode, data):
+        if prevNode:
+            newNode = Node(data)
+            newNode.next = prevNode.next
+            prevNode.next = newNode
+
+    def printList(self):
+        current = self.head
+        while current:
+            print(current.data, end = " ")
+            current = current.next
+        print()
+
+if __name__ == "__main__":
+    l = LinkedList()
+    l.printList()
+    l.push(1)
+    l.printList()
+    l.append(2)
+    l.printList()
+    l.append(4)
+    l.printList()
+    l.append(5)
+    l.printList()
+    l.insertAfter(l.head.next, 3)
+    l.printList()
