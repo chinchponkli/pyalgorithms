@@ -34,8 +34,10 @@ def findKCores(graph, k):
                 self.DFSUtil(i,k,vDegree,visited) 
 
     for vertex in graph.graph.keys():
+        # print adjacency list only for nodes whose degree >= k
         if vDegree[vertex] >= k:
             print("[" + str(vertex) + "] ->", end = " ")
+            # print a vertex only if its degree is >= k
             for i in graph.graph[vertex]:
                 if vDegree[i] >= k:
                     print(i, end = " ")
