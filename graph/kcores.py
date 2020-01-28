@@ -29,9 +29,9 @@ def findKCores(graph, k):
     # modified dfs
     dfsUtil(graph, 0, vDegree, visited, k)
 
-    for i in range(self.V): 
-            if visited[i] ==False: 
-                self.DFSUtil(i,k,vDegree,visited) 
+    for vertex in graph.graph.keys(): 
+        if not visited[vertex]: 
+            dfsUtil(graph, vertex, vDegree, visited, k) 
 
     for vertex in graph.graph.keys():
         # print adjacency list only for nodes whose degree >= k
