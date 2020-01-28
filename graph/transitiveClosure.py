@@ -9,8 +9,8 @@ For example, consider below graph:
 ^           ^
 |___________|
 
+Also, a node is always reachable from itself.
 
-transitiveclosure
 Transitive closure of above graphs is 
      1 1 1 1 
      1 1 1 1 
@@ -24,7 +24,6 @@ def dfsUtil(graph, s, v, tc):
     for i in graph.graph[v]:
         if tc[s][i] == 0:
             dfsUtil(graph, s, i, tc)
-
 
 def transitiveClosure(graph, n):
     tc = [[0 for i in range(n)] for j in range(n)]
