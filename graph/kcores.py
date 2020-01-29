@@ -29,6 +29,7 @@ def findKCores(graph, k):
     # modified dfs
     dfsUtil(graph, 0, vDegree, visited, k)
 
+    # modify degrees for unconnected components
     for vertex in graph.graph.keys(): 
         if not visited[vertex]: 
             dfsUtil(graph, vertex, vDegree, visited, k) 
