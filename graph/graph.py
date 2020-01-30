@@ -36,4 +36,5 @@ class Graph:
 
     def print(self):
         for vertex in self.graph.keys():
-            print ("[" + str(vertex) + "] -> " + self.graph[vertex])
+            print ("[" + str(vertex) + "] ->", end = " ")
+            print(self.graph[vertex])
