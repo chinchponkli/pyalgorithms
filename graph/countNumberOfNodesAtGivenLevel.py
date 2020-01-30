@@ -14,8 +14,6 @@ def numberOfNodesAtLevel(graph, l, v):
                 visited[i] = True
 
     count = 0
-
-    print (levels)
     for node in levels.keys():
         if levels[node] == l:
             count += 1
