@@ -32,3 +32,8 @@ class Graph:
         for i in self.graph[s]:
             if not visited[i]:
                 self.dfsUtil(i, visited)
+
+    def print(self):
+        for vertex in self.graph.keys():
+            print ("[" + str(vertex) + "] ->", end = " ")
+            print(self.graph[vertex])
