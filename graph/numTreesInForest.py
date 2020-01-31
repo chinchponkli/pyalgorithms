@@ -1,3 +1,7 @@
+'''
+Given n nodes of a forest (collection of trees), find the number of trees in the forest.
+'''
+
 from undirectedgraph import Graph
 
 def dfs(graph, vertex, visited):
