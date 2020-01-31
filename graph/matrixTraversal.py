@@ -43,5 +43,5 @@ def minVertices(matrix):
                 print(i, j)
                 dfs(matrix, i, j, visited)
 
-matrix = [[1, 2, 3],  [2, 3, 1], [1, 1, 1]]
+matrix = [[2, 2, 3],  [2, 3, 3], [1, 1, 1]]
 minVertices(matrix)
