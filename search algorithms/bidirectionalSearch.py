@@ -15,8 +15,7 @@ def bidirectionalSearch(arr, key):
         if arr[r] == key:
             return r
         l, r = l + 1, r - 1
-
-
+        
 arr = [1, 2, 3, 4, 5, 6, 7, 8]
 for i in arr:
     print(bidirectionalSearch(arr, i))
