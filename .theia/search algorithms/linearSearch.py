@@ -1,3 +1,8 @@
+'''
+Time Complexity : O(n)
+Auxiliary Space : O(1)
+'''
+
 def linearSearch(arr, k):
     for i in range(len(arr)):
         if arr[i] == k:

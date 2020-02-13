@@ -1,5 +1,8 @@
 '''
 Given a sorted array arr[] of n elements, write a function to search a given element x in arr[].
+
+Time Complexity : O(log n)
+Auxiliary Space : O(1)
 '''
 
 def binarySearch(arr, key):
